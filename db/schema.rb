@@ -15,6 +15,17 @@ ActiveRecord::Schema.define(version: 20160714183210) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "boxes", force: :cascade do |t|
+    t.integer  "length"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "label"
+    t.boolean  "sealed"
+    t.boolean  "arrived"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
