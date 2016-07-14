@@ -25,15 +25,15 @@ Specifications:
 This application will take two resources being Items and Boxes. 
 
 Each item will have:
-	-A name
-	-A detailed description
-	-A weight
-	-An approximate value for insurance purposes
+-A name
+-A detailed description
+-A weight
+-An approximate value for insurance purposes
 Each box will need:
-	-Dimensions such as length, width, and height
-	-A label
-	-An indiction as to whether or not the box is sealed (when sealed, no more items can be added to the box)
-	-A property indicating whether or not the box arrived.
+-Dimensions such as length, width, and height
+-A label
+-An indiction as to whether or not the box is sealed (when sealed, no more items can be added to the box)
+-A property indicating whether or not the box arrived.
 This application will have the following pages:
 -A home page
 -A form for editing an item
