@@ -24,26 +24,18 @@ Specifications:
 
 This application will take two resources being Items and Boxes. 
 
-Each item will have:
+-Each item will have:
 
-A name
-A detailed description
-A weight
-An approximate value for insurance purposes
+A name, detailed description, a weight, and an approximate value for insurance purposes.
 
-Each box will need:
+-Each box will need:
 
-Dimensions such as length, width, and height
-A label
-An indiction as to whether or not the box is sealed (when sealed, no more items can be added to the box)
-A property indicating whether or not the box arrived.
+Dimensions such as length, width, and height, a label, an indiction as to whether or not the box is sealed (when sealed, no more items can be added to the box).
+The box will also need to properly indicate whether or not the box arrived.
 
-This application will have the following pages:
+-This application will have the following pages:
 
-A home page
-A form for editing an item
-Box details
-Form for creating a box
+A home page, a form for editing an item, box details and a form for creating a box.
 
 ##Stretch Goals
 -Make it so that Items can be moved from Box to Box by dragging and dropping.
