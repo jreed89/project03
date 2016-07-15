@@ -11,8 +11,8 @@ def new
 end
 def create
 	@boxes = Box.new(params.require(:box).permit(:label, :length, :width, :height))
-	if @box.save
-		redirect_to action: "index"
+	if @boxes.save
+		redirect_to items_path
 	else
 		puts "ERROR"
 	end

@@ -1,0 +1,19 @@
+<%= form_for @boxes do |box| %>
+  <div>
+    <%= box.label :label, 'Name'%>
+    <%= box.text_field :label%>
+  </div>
+  <div>
+    <%= box.label :length, 'Length' %>
+    <%= box.text_field :length %>
+  </div>
+  <div>
+    <%= box.label :width, 'Width' %>
+    <%= box.text_field :width %>
+  </div>
+  <div>
+    <%= box.label :height, 'Height' %>
+    <%= box.text_field :height %>
+  </div>
+  <%= box.submit "Submit" %>
+<% end %>

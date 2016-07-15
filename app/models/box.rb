@@ -1,3 +1,7 @@
  class Box < ApplicationRecord
- 	has_many :items, inverse_of: :box
+ 	  has_many :items#, inverse_of: :box
  end
+
+
+
+

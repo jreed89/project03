@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root to: "items#index"
+
 root to: "items#index"
 
 get "items", to: "items#index"
@@ -12,7 +12,16 @@ patch "items/:id", to: "items#update"
 
 
 
-get "box", to: "box#index"
+
+
+
+get "boxes", to: "boxes#index"
+get "boxes/new", to: "boxes#new"
+get "boxes/:id", to: "boxes#show", as: :box
+post "boxes", to: "boxes#create"
+get "boxes/:id/edit", to: "boxes#edit", as: :box_edit
+patch "boxes/:id", to: "boxes#update"
+
 
 
 
