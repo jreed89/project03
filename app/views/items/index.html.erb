@@ -1,3 +1,20 @@
 <h1>Welcome.. Ready to move</h1>
 
-<h4><%= @items %></h4>
+
+<table class="striped bordered">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Weight</th>
+    <th>Value</th>
+  </tr>
+
+  <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.description %></td>
+        <td><%= item.weight %></td>
+        <td><%= item.value %></td>
+      </tr>
+  <% end %>
+</table>
