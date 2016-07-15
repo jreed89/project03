@@ -13,4 +13,7 @@ class ItemsController < ApplicationController
   		@item.save
   		redirect_to items_path
 	end
+	def edit
+    	@item = Item.find(params[:id])
+	end
 end
