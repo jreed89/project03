@@ -21,4 +21,10 @@ class ItemsController < ApplicationController
     	item.update_attributes(params.require(:item).permit(:name, :description, :weight, :value))
     	redirect_to item
 	end
+
+	def destroy
+    	@item = Artist.find(params[:id])
+    	@item.destroy
+    	redirect_to items_path
+	end
 end
