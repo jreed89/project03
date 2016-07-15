@@ -1,4 +1,4 @@
-class BoxController < ApplicationController
+class BoxesController < ApplicationController
 
 def index
 	@boxes = Box.all
