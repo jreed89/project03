@@ -4,13 +4,12 @@ root to: "items#index"
 
 
 get "box", to: "box#index"
-
+ 
 
 
 
 
 get "items", to: "items#index"
-
 
 
 
