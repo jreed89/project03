@@ -1,15 +1,10 @@
 <h1>Welcome.. Ready to move</h1>
 
-<h4>
+<h4>Boxes</h4>
 <% @boxes.each do |box| %>
   <%= link_to box_url(box) do %>
     <p><%= box.label %></p>
-
-  <% end %>
-<% end %>
-<%= link_to "New Box", boxes_new_path %>
-</h4>
-<table class="striped bordered">
+  <table class="striped bordered">
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -17,7 +12,7 @@
     <th>Value</th>
   </tr>
 
-  <% @items.each do |item| %>
+    <% @items.each do |item| %>
       <tr>
         <td><%= item.name %></td>
         <td><%= item.description %></td>
@@ -31,4 +26,8 @@
   <% end %>
 </table>
 <%= link_to "Add an Item", items_new_path %>
+<% end %>
+<% end %> 
+
+<%= link_to "New Box", boxes_new_path %>
 
