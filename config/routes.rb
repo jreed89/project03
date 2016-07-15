@@ -5,7 +5,7 @@ root to: "items#index"
 get "items", to: "items#index"
 get "items/new", to: "items#new"
 get "items/:id", to: "items#show", as: :item
-
+post "items", to: "items#create"
 
 get "box", to: "box#index"
 
