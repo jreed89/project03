@@ -15,6 +15,10 @@
         <td><%= item.description %></td>
         <td><%= item.weight %></td>
         <td><%= item.value %></td>
+        <td><a href="<%= item_edit_path(item) %>" >
+                    <i>mode_edit</i>
+                </a>
+          </td>
       </tr>
   <% end %>
 </table>
