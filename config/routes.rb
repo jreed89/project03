@@ -7,7 +7,7 @@ get "items/new", to: "items#new"
 get "items/:id", to: "items#show", as: :item
 post "items", to: "items#create"
 get "items/:id/edit", to: "items#edit", as: :item_edit
-
+patch "items/:id", to: "items#update"
 
 
 
