@@ -1,0 +1,20 @@
+<%= form_for @item do |item| %>
+  <div>
+    <%= item.label :name, 'Name'%>
+    <%= item.text_field :name%>
+  </div>
+  <div>
+    <%= item.label :description, 'Description' %>
+    <%= item.text_area :description %>
+  </div>
+  <div>
+    <%= item.label :weight, 'Weight' %>
+    <%= item.text_field :weight %>
+  </div>
+  <div>
+    <%= item.label :value, 'Value' %>
+    <%= item.text_field :value %>
+  </div>
+  <%= item.submit "Submit" %>
+<% end %>
+
