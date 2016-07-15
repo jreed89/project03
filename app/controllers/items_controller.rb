@@ -16,4 +16,9 @@ class ItemsController < ApplicationController
 	def edit
     	@item = Item.find(params[:id])
 	end
+	def update
+    	item = Item.find(params[:id])
+    	item.update_attributes(params.require(:item).permit(:name, :description, :weight, :value))
+    	redirect_to item
+end
 end
