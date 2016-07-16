@@ -21,7 +21,7 @@ get "boxes/:id", to: "boxes#show", as: :box
 post "boxes", to: "boxes#create"
 get "boxes/:id/edit", to: "boxes#edit", as: :box_edit
 patch "boxes/:id", to: "boxes#update"
-
+delete "boxes/:id", to: "boxes#destroy"
 
 
 
