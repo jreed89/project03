@@ -4,7 +4,8 @@
 <% @boxes.each do |box| %>
   <%= link_to box_url(box) do %>
   <p><%= box.label %></p>
-  <a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/box/<%= box.id %>" rel="nofollow"><i class="large material-icons">Delete</i>
+  <a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/boxes/<%= box.id %>" rel="nofollow"><i class="large material-icons">Delete</i>
+
   <table class="striped bordered">
   <tr>
     <th>Name</th>
