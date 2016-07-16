@@ -15,7 +15,7 @@ delete "items/:id", to: "items#destroy"
 
 
 
-get "boxes", to: "boxes#index"
+get "boxes", to: "items#index"
 get "boxes/new", to: "boxes#new"
 get "boxes/:id", to: "boxes#show", as: :box
 post "boxes", to: "boxes#create"
