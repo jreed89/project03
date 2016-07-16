@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
 	end
 
 	def destroy
-    	@item = Artist.find(params[:id])
+    	@item = Item.find(params[:id])
     	@item.destroy
     	redirect_to items_path
 	end
