@@ -15,5 +15,13 @@
     <%= box.label :height, 'Height' %>
     <%= box.text_field :height %>
   </div>
+  <div>
+    <%= box.label :sealed, 'Sealed' %>
+    <%= box.check_box :sealed %>
+  </div>
+  <div>
+    <%= box.label :arrived, 'Arrived' %>
+    <%= box.check_box :arrived %>
+  </div>
   <%= box.submit "Submit" %>
 <% end %>

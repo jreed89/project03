@@ -10,7 +10,7 @@ def new
 	@boxes = Box.new
 end
 def create
-	@boxes = Box.new(params.require(:box).permit(:label, :length, :width, :height))
+	@boxes = Box.new(params.require(:box).permit(:label, :length, :width, :height, :sealed, :arrived))
 	if @boxes.save
 		redirect_to items_path
 	else
@@ -22,11 +22,15 @@ def edit
 end
 def update
 	@boxes = Box.find(params[:id])
-	if @boxes.update(params.require(:box).permit(:label, :length, :width, :height))
-		redirect_to action: "index"
+	if @boxes.update(params.require(:box).permit(:label, :length, :width, :height, :sealed, :arrived))
+		redirect_to items_path
 	else
 		puts "ERROR"
 	end	
 end
-
+def destroy
+    	@boxes = Box.find(params[:id])
+   		@boxes.destroy
+    	redirect_to items_path
+	end
 end

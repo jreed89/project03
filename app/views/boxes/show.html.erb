@@ -2,5 +2,11 @@
 <h5><%= @boxes.length %></h5>
 <h5><%= @boxes.width %></h5>
 <h5><%= @boxes.height %></h5>
+<h5><%= @boxes.sealed %></h5>
+<h5><%= @boxes.arrived %></h5>
+
 
 <%= button_to 'edit', box_edit_path, method: :get %>
+
+
+<!-- lines 7 and 8 should show the total weight and value -->
