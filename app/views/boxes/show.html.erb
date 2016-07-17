@@ -1,12 +1,24 @@
-<h2><%= @boxes.label %></h2>
-<h5><%= @boxes.length %></h5>
-<h5><%= @boxes.width %></h5>
-<h5><%= @boxes.height %></h5>
-<h5><%= @boxes.sealed %></h5>
-<h5><%= @boxes.arrived %></h5>
+<!-- <h2><%# @boxes.label %></h2>
+<h5><%# @boxes.length %></h5>
+<h5><%# @boxes.width %></h5>
+<h5><%# @boxes.height %></h5>
+<h5><%# @boxes.sealed %></h5>
+<h5><%# @boxes.arrived %></h5>
 
 
-<%= button_to 'edit', box_edit_path, method: :get %>
-
+<%# button_to 'edit', box_edit_path, method: :get %>
+ -->
 
 <!-- lines 7 and 8 should show the total weight and value -->
+
+<h2> Box: <%= @boxes.label %></h2>
+<%= link_to "New Item", items_new_path(:box_id => @boxes.id), { :class => "button waves-effect waves-light btn" } %>
+  <br><br>
+  <div class="row">
+    <% @items.each do |item| %>
+        <h1><%= @items.name %></h1>
+		<h4><%= @items.description %></h4>
+		<h4><%= @items.weight %>: lbs</h4>
+		<h4>$<%= @items.value %> Dollars</h4>
+    <% end %>
+  </div>

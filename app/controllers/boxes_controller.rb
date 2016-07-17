@@ -6,6 +6,7 @@ def index
 end
 def show
 	@boxes = Box.find(params[:id])
+	@items = @boxes.items
 end
 def new
 	@boxes = Box.new
