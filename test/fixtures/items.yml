@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  box: one
   name: MyString
   description: MyString
   weight: 1
   value: 1
 
 two:
+  box: two
   name: MyString
   description: MyString
   weight: 1

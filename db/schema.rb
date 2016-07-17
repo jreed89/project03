@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714183210) do
+ActiveRecord::Schema.define(version: 20160717182227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,12 +27,15 @@ ActiveRecord::Schema.define(version: 20160714183210) do
   end
 
   create_table "items", force: :cascade do |t|
+    t.integer  "box_id"
     t.string   "name"
     t.string   "description"
     t.integer  "weight"
     t.integer  "value"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["box_id"], name: "index_items_on_box_id", using: :btree
   end
 
+  add_foreign_key "items", "boxes"
 end
