@@ -14,7 +14,7 @@ end
 def create
 	@boxes = Box.new(params.require(:box).permit(:label, :length, :width, :height, :sealed, :arrived))
 	if @boxes.save
-		redirect_to items_path
+		redirect_to boxes_path
 	else
 		puts "ERROR"
 	end

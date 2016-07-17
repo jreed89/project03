@@ -18,6 +18,8 @@ It should show the dimensions, whether it arrived, and if it is sealed. -->
 <% @boxes.each do |box| %>
   <%= link_to box_url(box) do %>
   <p><%= box.label %></p>
+  <a class="btn-floating btn-large red" href="<%= box_edit_path(box) %>" ><i class="large material-icons">Box Edit</i></a>
+   
    <a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/boxes/<%= box.id %>" rel="nofollow"><i class="large material-icons">Delete</i></a>
  
   <table class="striped bordered">
