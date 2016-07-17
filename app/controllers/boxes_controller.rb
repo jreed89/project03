@@ -28,5 +28,9 @@ def update
 		puts "ERROR"
 	end	
 end
-
+def destroy
+    	@boxes = Box.find(params[:id])
+   		@boxes.destroy
+    	redirect_to items_path
+	end
 end

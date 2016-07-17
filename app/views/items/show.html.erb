@@ -1,5 +1,6 @@
-<h1><%= @item.name %></h1>
+<h1><%= @items.name %></h1>
 
-<h4><%= @item.description %></h4>
-<h4><%= @item.weight %>: lbs</h4>
-<h4>$<%= @item.value %> Dollars</h4>
+<h4><%= @items.description %></h4>
+<h4><%= @items.weight %>: lbs</h4>
+<h4>$<%= @items.value %> Dollars</h4>
+<%= button_to 'edit', item_edit_path, method: :get %>
