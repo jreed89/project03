@@ -13,7 +13,7 @@ Rails.application.routes.draw do
  delete "items/:id", to: "items#destroy"
 
 
- get "boxes", to: "items#index"
+ get "boxes", to: "boxes#index"
  get "boxes/new", to: "boxes#new"
  get "boxes/:id", to: "boxes#show", as: :box
  post "boxes", to: "boxes#create"

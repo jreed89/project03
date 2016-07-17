@@ -2,6 +2,7 @@ class BoxesController < ApplicationController
 
 def index
 	@boxes = Box.all
+	@items = Item.all
 end
 def show
 	@boxes = Box.find(params[:id])

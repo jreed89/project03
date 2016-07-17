@@ -1,6 +1,6 @@
-<h1>I'm a BOX!!</h1>
+<!-- <h1>I'm a BOX!!</h1>
 This should show your box after you have edited it. 
-It should show the dimensions, whether it arrived, and if it is sealed.
+It should show the dimensions, whether it arrived, and if it is sealed. -->
 <!-- <ul>
 <% @boxes.each #do |box| %>
 	<%# link_to boxes_url(box) do %>
@@ -9,4 +9,42 @@ It should show the dimensions, whether it arrived, and if it is sealed.
 <% #end %>
 </ul> -->
 
-somehow put a link here to route back to the home page
+<!-- somehow put a link here to route back to the home page -->
+
+
+<h1>Welcome.. Ready to move</h1>
+
+<h4>Boxes</h4>
+<% @boxes.each do |box| %>
+  <%= link_to box_url(box) do %>
+  <p><%= box.label %></p>
+   <a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/boxes/<%= box.id %>" rel="nofollow"><i class="large material-icons">Delete</i></a>
+ 
+  <table class="striped bordered">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Weight</th>
+    <th>Value</th>
+  </tr>
+
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.description %></td>
+        <td><%= item.weight %></td>
+        <td><%= item.value %></td>
+        <td><a href="<%= item_edit_path(item) %>" >
+                    <i>Edit</i>
+                </a>
+          </td>
+          <td><a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= item.name %>?" data-method="delete" href="/items/<%= item.id %>" rel="nofollow"><i class="large material-icons">Delete</i>
+           </a>
+        </td>
+      </tr>
+  <% end %>
+</table>
+<% end %>
+<%= link_to "Add an Item", items_new_path %>
+<% end %> 
+<%= link_to "New Box", boxes_new_path %>

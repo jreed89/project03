@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
 	def create
   		@item = Item.new(params.require(:item).permit(:name, :description, :weight, :value))
   		@item.save
-  		redirect_to items_path
+  		redirect_to boxes_path
 	end
 	def edit
     	@item = Item.find(params[:id])
