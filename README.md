@@ -57,3 +57,6 @@ Class Notes
 <a href= "http://stackoverflow.com/questions/18859981/rails-link-to-into-another-controller-with-params">Link to Another Controller</a>
 
 <a href= "http://stackoverflow.com/questions/4834809/adding-a-column-to-an-existing-table-in-a-rails-migration">Adding Column to Database</a>
+
+
+<a href= "https://trello.com/b/aTgMRyHM/project-3-box-it">Trello</a>
