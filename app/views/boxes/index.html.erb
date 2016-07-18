@@ -15,9 +15,11 @@ It should show the dimensions, whether it arrived, and if it is sealed. -->
 <div class= "#bdbdbd grey lighten-1"><h1>Welcome...Ready to move?</h1></div>
 
 <div class= "#e0e0e0 grey lighten-2"><h4>Boxes</h4></div>
+
 <% @boxes.each do |box| %>
   <%= link_to box_url(box) do %>
  <h5><%= box.label %></h5>
+
 <% end %>
  <table class="striped border"> 
   <th>Width: <%= box.width %></th>
@@ -26,15 +28,6 @@ It should show the dimensions, whether it arrived, and if it is sealed. -->
   <th>Sealed: <%= box.sealed %></th>
   <th>Arrived: <%= box.arrived %></th>
 </table>
-  <!-- 
-<div class="row">
-    <% @items.each #do |item| %>
-        <h1><%# item.name %></h1>
-    <h4><%# item.description %></h4>
-    <h4><%# item.weight %>: lbs</h4>
-    <h4>$<%# item.value %> Dollars</h4>
-    <% #end %>
-  </div> -->
 
    
    <a class="btn-floating btn-large #d50000 red accent-4" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/boxes/<%= box.id %>" rel="nofollow">Delete</a>

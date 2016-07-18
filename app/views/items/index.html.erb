@@ -20,10 +20,7 @@
         <td><%= item.description %></td>
         <td><%= item.weight %></td>
         <td><%= item.value %></td>
-        <td><a href="<%= items_edit_path(item) %>" >
-                    <i>Edit</i>
-                </a>
-          </td>
+       
           <td><a class="btn-floating btn-large #d50000 red accent-4" data-confirm="Are you sure you want to delete <%= item.name %>?" data-method="delete" href="/items/<%= item.id %>" rel="nofollow">Delete</a>
            </a>
         </td>
