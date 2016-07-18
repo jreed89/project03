@@ -12,17 +12,33 @@
 
 <!-- lines 7 and 8 should show the total weight and value -->
 
-<h2> Box: <%= @boxes.label %></h2>
-<%= link_to "Edit Box", box_edit_path(:box_id => @boxes.id)%>
-<%= link_to "New Item", items_new_path(:box_id => @boxes.id), { :class => "button waves-effect waves-light btn" } %>
+<div class= "#bdbdbd grey lighten-1"><h1 class="center"> Box: <%= @boxes.label %></h1></div>
+<div class="center"><%= link_to "Edit Box", box_edit_path(:box_id => @boxes.id), { :class => "btn-floating btn-large #d50000 red accent-4" }%></div>
+<div class="center"><%= link_to "New Item", items_new_path(:box_id => @boxes.id), { :class => "btn-floating btn-large #d50000 red accent-4" } %></div>
   <br><br>
-  <div class="row">
+<table class="striped border">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Weight</th>
+    <th>Value</th>
+  </tr>
     <% @items.each do |item| %>
-        <h1><%= item.name %></h1>
-		<h4><%= item.description %></h4>
-		<h4><%= item.weight %>: lbs</h4>
-		<h4>$<%= item.value %> Dollars</h4>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.description %></td>
+        <td><%= item.weight %> lbs</td>
+        <td>$<%= item.value %></td>
+        <!-- We need an edit and delete button for the items that will work -->
+        <!-- <td><a class="btn-floating btn-large #d50000 red accent-4" data-method="edit" href="/items/<%= item.id %>" rel="nofollow">Edit</a>
+           </a>
+        </td> -->
+       <!-- We need an edit button for the items that will work -->
+       <!-- <td><a class="btn-floating btn-large #d50000 red accent-4" data-confirm="Are you sure you want to delete <%= item.name %>?" data-method="delete" href="/items/<%= item.id %>" rel="nofollow">Delete</a>
+           </a>
+        </td> -->
     <% end %>
-    <h1>Total <%# item.total %></h1>
-  </div>
-  
+  </table>
+    <h3>Totals </h3> 
+<h4 class="center #d50000 red accent-4"><a href= "/">Home</a></h4>
+  <!-- </div> --> 
