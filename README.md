@@ -47,3 +47,5 @@ A home page, a form for editing an item, box details and a form for creating a b
 
 -Modify the previous feature so that a select group of other Users can be added to your User account as collaborators.
 
+##Refrences Used
+<a href="http://guides.rubyonrails.org/form_helpers.html">Ruby on Rails</a>
