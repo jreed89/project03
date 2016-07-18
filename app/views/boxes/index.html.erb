@@ -1,6 +1,6 @@
-<h1>I'm a BOX!!</h1>
+<!-- <h1>I'm a BOX!!</h1>
 This should show your box after you have edited it. 
-It should show the dimensions, whether it arrived, and if it is sealed.
+It should show the dimensions, whether it arrived, and if it is sealed. -->
 <!-- <ul>
 <% @boxes.each #do |box| %>
 	<%# link_to boxes_url(box) do %>
@@ -9,4 +9,46 @@ It should show the dimensions, whether it arrived, and if it is sealed.
 <% #end %>
 </ul> -->
 
-somehow put a link here to route back to the home page
+<!-- somehow put a link here to route back to the home page -->
+
+
+<h1>Welcome.. Ready to move</h1>
+
+
+<% @boxes.each do |box| %>
+  <%= link_to box_url(box) do %>
+  <p><%= box.label %></p>
+<% end %>
+ <table> 
+  <th>Width: <%= box.width %></th>
+  <th>Height: <%= box.height %></th>
+  <th>Length: <%= box.height %></th>
+  <th>Sealed: <%= box.sealed %></th>
+  <th>Arrived: <%= box.arrived %></th>
+</table>
+  <!-- 
+<div class="row">
+    <% @items.each do |item| %>
+        <h1><%# item.name %></h1>
+    <h4><%# item.description %></h4>
+    <h4><%# item.weight %>: lbs</h4>
+    <h4>$<%# item.value %> Dollars</h4>
+    <% end %>
+  </div> -->
+
+   
+   <a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/boxes/<%= box.id %>" rel="nofollow"><i class="large material-icons">Delete</i></a>
+<% end %>
+<%# link_to "Add an Item", items_new_path(:box_id => box.id) %>
+ 
+<%= link_to "New Box", boxes_new_path %>
+
+
+
+
+
+
+
+<%# link_to "New Item", items_new_path(:box_id => @boxes.id), { :class => "button waves-effect waves-light btn" } %>
+  <br><br>
+  

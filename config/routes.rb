@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 
- root to: "items#index"
+ root to: "boxes#index"
 
  get "items", to: "items#index"
  get "items/new", to: "items#new"
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
  delete "items/:id", to: "items#destroy"
 
 
- get "boxes", to: "items#index"
+ get "boxes", to: "boxes#index"
  get "boxes/new", to: "boxes#new"
  get "boxes/:id", to: "boxes#show", as: :box
  post "boxes", to: "boxes#create"
