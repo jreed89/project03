@@ -1,4 +1,5 @@
 <%= form_for @item do |item| %>
+<%= item.hidden_field :box_id, :value => @boxes.id %>
   <div>
     <%= item.label :name, 'Name'%>
     <%= item.text_field :name%>

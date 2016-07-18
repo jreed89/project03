@@ -25,7 +25,7 @@ end
 def update
 	@boxes = Box.find(params[:id])
 	if @boxes.update_attributes(params.require(:box).permit(:label, :length, :width, :height, :sealed, :arrived))
-		redirect_to box
+		redirect_to boxes_path
 	else
 		puts "ERROR"
 	end	

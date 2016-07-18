@@ -14,39 +14,41 @@ It should show the dimensions, whether it arrived, and if it is sealed. -->
 
 <h1>Welcome.. Ready to move</h1>
 
-<h4>Boxes</h4>
+
 <% @boxes.each do |box| %>
   <%= link_to box_url(box) do %>
   <p><%= box.label %></p>
-  <a class="btn-floating btn-large red" href="<%= box_edit_path(box) %>" ><i class="large material-icons">Box Edit</i></a>
+<% end %>
+ <table> 
+  <th>Width: <%= box.width %></th>
+  <th>Height: <%= box.height %></th>
+  <th>Length: <%= box.height %></th>
+  <th>Sealed: <%= box.sealed %></th>
+  <th>Arrived: <%= box.arrived %></th>
+</table>
+  <!-- 
+<div class="row">
+    <% @items.each do |item| %>
+        <h1><%# item.name %></h1>
+    <h4><%# item.description %></h4>
+    <h4><%# item.weight %>: lbs</h4>
+    <h4>$<%# item.value %> Dollars</h4>
+    <% end %>
+  </div> -->
+
    
    <a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/boxes/<%= box.id %>" rel="nofollow"><i class="large material-icons">Delete</i></a>
- 
-  <table class="striped bordered">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Weight</th>
-    <th>Value</th>
-  </tr>
-
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.description %></td>
-        <td><%= item.weight %></td>
-        <td><%= item.value %></td>
-        <td><a href="<%= item_edit_path(item) %>" >
-                    <i>Edit</i>
-                </a>
-          </td>
-          <td><a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= item.name %>?" data-method="delete" href="/items/<%= item.id %>" rel="nofollow"><i class="large material-icons">Delete</i>
-           </a>
-        </td>
-      </tr>
-  <% end %>
-</table>
 <% end %>
-<%= link_to "Add an Item", items_new_path %>
-<% end %> 
+<%# link_to "Add an Item", items_new_path(:box_id => box.id) %>
+ 
 <%= link_to "New Box", boxes_new_path %>
+
+
+
+
+
+
+
+<%# link_to "New Item", items_new_path(:box_id => @boxes.id), { :class => "button waves-effect waves-light btn" } %>
+  <br><br>
+  
