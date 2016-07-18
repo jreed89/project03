@@ -1,12 +1,12 @@
-<h1>Welcome.. Ready to move</h1>
+<div class= "#bdbdbd grey lighten-1"><h1>Welcome...Ready to move?</h1></div>
 
-<h4>Boxes</h4>
+<div class= "#e0e0e0 grey lighten-2"><h4>Boxes</h4></div>
 <% @boxes.each do |box| %>
   <%= link_to box_url(box) do %>
-  <p><%= box.label %></p>
-   <a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/boxes/<%= box.id %>" rel="nofollow"><i class="large material-icons">Delete</i>
+  <h5><%= box.label %></h5>
+   <a class="btn-floating btn-large #d50000 red accent-4" data-confirm="Are you sure you want to delete <%= box.label %>?" data-method="delete" href="/boxes/<%= box.id %>" rel="nofollow">Delete</a>
  
-  <table class="striped bordered">
+  <table class="striped border">
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -20,19 +20,18 @@
         <td><%= item.description %></td>
         <td><%= item.weight %></td>
         <td><%= item.value %></td>
-        <td><a href="<%= item_edit_path(item) %>" >
+        <td><a href="<%= items_edit_path(item) %>" >
                     <i>Edit</i>
                 </a>
           </td>
-          <td><a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= item.name %>?" data-method="delete" href="/items/<%= item.id %>" rel="nofollow"><i class="large material-icons">Delete</i>
+          <td><a class="btn-floating btn-large #d50000 red accent-4" data-confirm="Are you sure you want to delete <%= item.name %>?" data-method="delete" href="/items/<%= item.id %>" rel="nofollow">Delete</a>
            </a>
         </td>
       </tr>
   <% end %>
 </table>
 <% end %>
-<%= link_to "Add an Item", items_new_path %>
+<button class="btn-floating btn-large #d50000 red accent-4"><%= link_to "Item", items_new_path %></button>
 <% end %> 
-<%= link_to "New Box", boxes_new_path %>
+<button class="btn-floating btn-large #d50000 red accent-4"><%= link_to "Box", boxes_new_path %></button> 
 
-<!-- Total weight and value should show on the table and that variable should be transferred to boxes show page. -->
