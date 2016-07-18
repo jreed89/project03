@@ -29,14 +29,14 @@
         <td><%= item.description %></td>
         <td><%= item.weight %> lbs</td>
         <td>$<%= item.value %></td>
+        <td><div><%= link_to "Edit Item", item_edit_path(:box_id => @boxes.id), { :class => "btn-floating btn-large #d50000 red accent-4" }%></div></td>
+      
         <!-- We need an edit and delete button for the items that will work -->
         <td><%= link_to "Edit Item", item_edit_path(:item_id => @boxes.id), { :class => "btn-floating btn-large #d50000 red accent-4" }%></div>
            
         </td>
        <!-- We need an edit button for the items that will work -->
-       <td><a class="btn-floating btn-large #d50000 red accent-4" data-confirm="Are you sure you want to delete <%= item.name %>?" data-method="delete" href="/items/<%= item.id %>" rel="nofollow">Delete</a>
-           </a>
-        </td>
+       <td><a class="btn-floating btn-large #d50000 red accent-4" data-confirm="Are you sure you want to delete <%= item.name %>?" data-method="delete" href="/items/<%= item.id %>" rel="nofollow">Delete</a></td>
     <% end %>
   </table>
     <h3>Totals </h3> 
