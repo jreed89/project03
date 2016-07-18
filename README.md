@@ -49,7 +49,11 @@ A home page, a form for editing an item, box details and a form for creating a b
 
 ##Refrences Used
 <a href="http://guides.rubyonrails.org/form_helpers.html">Ruby on Rails</a>
+
 Class Notes
+
 <a href="http://stackoverflow.com/questions/35608196/how-to-access-child-new-form-from-parent-index-page-in-rails">Stack overflow: Child to Parent</a>
+
 <a href= "http://stackoverflow.com/questions/18859981/rails-link-to-into-another-controller-with-params">Link to Another Controller</a>
+
 <a href= "http://stackoverflow.com/questions/4834809/adding-a-column-to-an-existing-table-in-a-rails-migration">Adding Column to Database</a>
