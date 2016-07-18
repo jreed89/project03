@@ -1,20 +1,20 @@
 <%= form_for @item do |item| %>
-  <div>
+  <div class="container #f9fbe7 lime lighten-5">
     <%= item.label :name, 'Name'%>
     <%= item.text_field :name%>
   </div>
-  <div>
+  <div class="container #f0f4c3 lime lighten-4">
     <%= item.label :description, 'Description' %>
-    <%= item.text_area :description %>
+    <p class="flow-text"><%= item.text_area :description %></p>
   </div>
-  <div>
+  <div class="container #e6ee9c lime lighten-3">
     <%= item.label :weight, 'Weight' %>
     <%= item.text_field :weight %>
   </div>
-  <div>
+  <div class="container #dce775 lime lighten-2">
     <%= item.label :value, 'Value' %>
     <%= item.text_field :value %>
   </div>
-  <%= item.submit "Submit" %>
+  <div class="center"><button class="#d4e157 lime lighten-1"><%= item.submit "Submit"%></button></div>
 <% end %>
 
