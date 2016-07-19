@@ -1,8 +1,8 @@
 
-<div class="center"><h1><%= @items.name %></h1></div>
+<div class="center"><h1><%= @item.name %></h1></div>
 
-<div class="container #84ffff cyan accent-1"><h4>Description: <%= @items.description %></h4></div>
-<div class="container #18ffff cyan accent-2"><h4>Weight: <%= @items.weight %>: lbs</h4></div>
-<div class="container #00e5ff cyan accent-3"><h4>$ <%= @items.value %> Dollars</h4></div>
+<div class="container #84ffff cyan accent-1"><h4>Description: <%= @item.description %></h4></div>
+<div class="container #18ffff cyan accent-2"><h4>Weight: <%= @item.weight %>: lbs</h4></div>
+<div class="container #00e5ff cyan accent-3"><h4>$ <%= @item.value %> Dollars</h4></div>
 <div class="center #00b8d4 cyan accent-4"><%= button_to 'edit', item_edit_path, method: :get %></div>
 <h4 class="center"><a href= "/">Home</a></h4>
